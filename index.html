@@ -1,0 +1,1572 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>磁力联盟 - 官方视频门户_原创影像与创作者社区</title>
+<meta name="description" content="磁力联盟官方网站，磁力联盟是企业级原创视频内容品牌，聚合优秀创作者与高清影像作品，搭建值得信赖的内容生态与创作者社区。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2440'/%3E%3Cpath d='M22 18h8v20h12v8H22z' fill='%2357e0c8'/%3E%3Ccircle cx='46' cy='22' r='7' fill='%23ff7a59'/%3E%3C/svg%3E">
+<style>
+:root{
+  --cl-navy:#101828;
+  --cl-navy-2:#182238;
+  --cl-ink:#1d2740;
+  --cl-mint:#22d3a5;
+  --cl-mint-soft:#d7f7ef;
+  --cl-coral:#ff6b4a;
+  --cl-paper:#f5f7fb;
+  --cl-line:#e2e8f2;
+  --cl-muted:#5b6b86;
+  --cl-white:#ffffff;
+  --cl-gold:#f6c453;
+  --sh-soft:0 10px 30px rgba(19,32,58,.08);
+  --sh-hover:0 18px 44px rgba(19,32,58,.16);
+  --rd-lg:20px;
+  --rd-md:14px;
+  --rd-sm:9px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--cl-paper);
+  color:var(--cl-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+.mgl-anchor{scroll-margin-top:130px}
+
+/* ============ sticky wrapper ============ */
+.mgl-sticky-wrap{
+  position:sticky;top:0;z-index:120;
+}
+.mgl-notice{
+  background:linear-gradient(90deg,#101828,#1c2a4a 55%,#17345c);
+  color:#dbe6f7;
+  font-size:13px;
+  letter-spacing:.2px;
+}
+.mgl-notice-inner{
+  max-width:1240px;margin:0 auto;padding:9px 22px;
+  display:flex;align-items:center;gap:12px;
+}
+.mgl-notice-tag{
+  flex:none;background:var(--cl-coral);color:#fff;
+  font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;letter-spacing:1px;
+}
+.mgl-notice-list{
+  flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+}
+.mgl-notice-list b{color:var(--cl-mint);font-weight:600}
+.mgl-notice-more{
+  flex:none;font-size:12px;color:var(--cl-mint);border-bottom:1px dashed rgba(34,211,165,.5);
+}
+.mgl-header{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--cl-line);
+  box-shadow:0 2px 14px rgba(16,24,40,.05);
+}
+.mgl-header-inner{
+  max-width:1240px;margin:0 auto;padding:0 22px;
+  display:flex;align-items:center;gap:26px;height:70px;
+}
+.mgl-logo{display:flex;align-items:center;gap:10px;flex:none}
+.mgl-logo-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(140deg,#1b2440,#25406b);
+  display:grid;place-items:center;position:relative;overflow:hidden;
+}
+.mgl-logo-mark::after{
+  content:"";position:absolute;width:14px;height:14px;border-radius:50%;
+  background:var(--cl-coral);right:5px;top:5px;
+}
+.mgl-logo-mark span{
+  color:var(--cl-mint);font-weight:800;font-size:19px;z-index:1;letter-spacing:-1px;
+}
+.mgl-logo-txt strong{display:block;font-size:18px;letter-spacing:1px;line-height:1.2}
+.mgl-logo-txt em{
+  display:block;font-style:normal;font-size:10px;color:var(--cl-muted);letter-spacing:3px;
+}
+.mgl-nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
+.mgl-nav a{
+  font-size:14.5px;padding:7px 13px;border-radius:9px;color:#2c3a55;transition:.2s;
+}
+.mgl-nav a:hover{background:var(--cl-mint-soft);color:#0d7a60}
+.mgl-head-tools{display:flex;align-items:center;gap:10px;flex:none}
+.mgl-search{
+  position:relative;display:flex;align-items:center;
+  background:#eef2f8;border-radius:22px;padding:0 6px 0 14px;height:38px;
+  border:1px solid transparent;transition:.2s;
+}
+.mgl-search:focus-within{background:#fff;border-color:var(--cl-mint);box-shadow:0 0 0 3px rgba(34,211,165,.16)}
+.mgl-search input{
+  width:150px;border:none;background:transparent;outline:none;font-size:13.5px;color:var(--cl-ink);
+}
+.mgl-search button{
+  width:28px;height:28px;border-radius:50%;background:var(--cl-navy);color:#fff;font-size:13px;
+  display:grid;place-items:center;
+}
+.mgl-search-feedback{
+  position:absolute;top:46px;left:0;right:0;background:#fff;border-radius:12px;
+  box-shadow:var(--sh-hover);padding:10px 14px;font-size:13px;color:var(--cl-muted);
+  display:none;border:1px solid var(--cl-line);z-index:130;
+}
+.mgl-search-feedback.show{display:block}
+.mgl-search-feedback b{color:#0d7a60}
+.mgl-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  border-radius:24px;font-size:14px;font-weight:600;padding:10px 22px;transition:.22s;
+}
+.mgl-btn-primary{background:var(--cl-navy);color:#fff}
+.mgl-btn-primary:hover{background:#243themed;transform:translateY(-2px);box-shadow:0 12px 22px rgba(16,24,40,.22)}
+.mgl-btn-mint{background:var(--cl-mint);color:#062a22}
+.mgl-btn-mint:hover{filter:brightness(1.06);transform:translateY(-2px)}
+.mgl-btn-ghost{border:1.5px solid rgba(16,24,40,.18);color:var(--cl-ink)}
+.mgl-btn-ghost:hover{border-color:var(--cl-navy);background:#fff}
+.mgl-btn-sm{padding:6px 14px;font-size:12.5px;border-radius:18px}
+.mgl-burger{
+  display:none;width:40px;height:40px;border-radius:10px;background:#eef2f8;
+  font-size:19px;color:var(--cl-navy);
+}
+.mgl-mobile-nav{
+  display:none;flex-direction:column;padding:8px 22px 18px;gap:2px;
+  border-top:1px solid var(--cl-line);background:#fff;
+}
+.mgl-mobile-nav.open{display:flex}
+.mgl-mobile-nav a{padding:11px 6px;font-size:15px;border-bottom:1px dashed #eef1f6}
+
+/* ============ hero ============ */
+.mgl-wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+.mgl-hero{
+  padding:52px 0 30px;
+  background:
+    radial-gradient(820px 340px at 88% -8%,rgba(34,211,165,.20),transparent 62%),
+    radial-gradient(640px 300px at 2% 8%,rgba(255,107,74,.13),transparent 60%),
+    linear-gradient(180deg,#f8fafd,#f5f7fb 78%);
+}
+.mgl-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+.mgl-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;
+  color:#0d7a60;background:var(--cl-mint-soft);padding:6px 14px;border-radius:20px;
+  letter-spacing:.5px;margin-bottom:18px;
+}
+.mgl-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--cl-mint);display:block}
+.mgl-h1{
+  font-size:clamp(38px,5.4vw,62px);line-height:1.08;letter-spacing:2px;
+  font-weight:800;color:var(--cl-navy);margin-bottom:6px;
+}
+.mgl-h1 span{
+  background:linear-gradient(100deg,#0d7a60,#22d3a5 55%,#38bdf8);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.mgl-hero-slogan{
+  font-size:17px;color:#39496a;font-weight:600;letter-spacing:1.5px;margin-bottom:16px;
+}
+.mgl-hero-desc{font-size:14.5px;color:var(--cl-muted);margin-bottom:22px;max-width:560px}
+.mgl-hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.mgl-hero-facts{display:flex;gap:30px;flex-wrap:wrap}
+.mgl-fact b{font-size:26px;color:var(--cl-navy);letter-spacing:1px}
+.mgl-fact b i{font-style:normal;font-size:14px;color:var(--cl-mint);margin-left:2px}
+.mgl-fact small{display:block;font-size:12px;color:var(--cl-muted);letter-spacing:1px}
+.mgl-hero-visual{
+  position:relative;border-radius:26px;overflow:hidden;
+  box-shadow:0 30px 60px rgba(16,24,40,.22);
+  aspect-ratio:16/11;background:#0e1730;
+}
+.mgl-hero-visual img{width:100%;height:100%;object-fit:cover}
+.mgl-hero-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.92);
+  display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.28);transition:.25s;
+}
+.mgl-hero-play::after{
+  content:"";width:0;height:0;border-left:20px solid var(--cl-navy);
+  border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px;
+}
+.mgl-hero-play:hover{transform:translate(-50%,-50%) scale(1.08)}
+.mgl-hero-float{
+  position:absolute;left:16px;bottom:16px;right:16px;
+  display:flex;align-items:center;gap:12px;color:#fff;
+  background:linear-gradient(90deg,rgba(10,18,36,.82),rgba(10,18,36,.28));
+  border-radius:16px;padding:12px 16px;backdrop-filter:blur(6px);
+}
+.mgl-hero-float strong{font-size:13.5px;display:block}
+.mgl-hero-float small{font-size:11.5px;opacity:.78}
+
+/* ============ section shell ============ */
+.mgl-section{padding:64px 0}
+.mgl-section-alt{background:#fff;border-top:1px solid var(--cl-line);border-bottom:1px solid var(--cl-line)}
+.mgl-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:32px;flex-wrap:wrap}
+.mgl-sec-eyebrow{
+  font-size:12px;letter-spacing:4px;color:#12a585;font-weight:700;margin-bottom:6px;
+}
+.mgl-h2{font-size:clamp(24px,3vw,32px);color:var(--cl-navy);letter-spacing:1px;line-height:1.25}
+.mgl-sec-sub{font-size:14px;color:var(--cl-muted);max-width:520px;margin-top:8px}
+.mgl-link-more{font-size:13.5px;color:#0d7a60;font-weight:600;white-space:nowrap}
+.mgl-link-more:hover{text-decoration:underline}
+
+/* ============ about / 解析 ============ */
+.mgl-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+.mgl-about-card{
+  background:#fff;border-radius:var(--rd-lg);padding:32px 30px;box-shadow:var(--sh-soft);
+  border:1px solid var(--cl-line);
+}
+.mgl-about-card h3{font-size:20px;color:var(--cl-navy);margin-bottom:14px;letter-spacing:.5px}
+.mgl-about-card p{font-size:14.5px;color:#42506b;margin-bottom:14px;text-align:justify}
+.mgl-tag-cloud{display:flex;flex-wrap:wrap;gap:9px;margin-top:8px}
+.mgl-tag-cloud span{
+  font-size:12.5px;color:#0d7a60;background:var(--cl-mint-soft);
+  padding:5px 13px;border-radius:18px;
+}
+.mgl-about-timeline{display:flex;flex-direction:column;gap:0;margin-top:6px}
+.mgl-tl-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px dashed #e7ecf5}
+.mgl-tl-item:last-child{border-bottom:none}
+.mgl-tl-dot{
+  flex:none;width:12px;height:12px;border-radius:50%;background:var(--cl-mint);
+  margin-top:8px;box-shadow:0 0 0 5px rgba(34,211,165,.15);
+}
+.mgl-tl-item b{display:block;font-size:14.5px;color:var(--cl-navy)}
+.mgl-tl-item small{font-size:12.5px;color:var(--cl-muted)}
+
+/* ============ feature ============ */
+.mgl-feature-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:22px}
+.mgl-feature-main{position:relative;border-radius:var(--rd-lg);overflow:hidden;box-shadow:var(--sh-soft);background:#0e1730;min-height:380px}
+.mgl-feature-main img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:.5s}
+.mgl-feature-main:hover img{transform:scale(1.04)}
+.mgl-feature-cover-mask{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,12,26,.05) 30%,rgba(6,12,26,.86) 100%)}
+.mgl-feature-info{position:absolute;left:0;right:0;bottom:0;padding:26px;color:#fff;z-index:2}
+.mgl-feature-info .mgl-chip{background:var(--cl-coral)}
+.mgl-feature-info h3{font-size:23px;line-height:1.35;margin:10px 0 8px;letter-spacing:.5px}
+.mgl-feature-info p{font-size:13px;opacity:.82;max-width:520px}
+.mgl-feature-side{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mgl-mini-card{
+  background:#fff;border-radius:var(--rd-md);overflow:hidden;box-shadow:var(--sh-soft);
+  border:1px solid var(--cl-line);transition:.24s;display:flex;flex-direction:column;
+}
+.mgl-mini-card:hover{transform:translateY(-5px);box-shadow:var(--sh-hover)}
+.mgl-mini-thumb{aspect-ratio:16/9;overflow:hidden;position:relative;background:#dfe7f2}
+.mgl-mini-thumb img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.mgl-mini-card:hover .mgl-mini-thumb img{transform:scale(1.06)}
+.mgl-mini-body{padding:12px 14px 14px}
+.mgl-mini-body h4{font-size:14px;line-height:1.45;color:var(--cl-navy);margin-bottom:6px}
+.mgl-mini-meta{font-size:11.5px;color:var(--cl-muted);display:flex;justify-content:space-between}
+.mgl-chip{
+  display:inline-block;font-size:11px;padding:2px 9px;border-radius:12px;
+  background:var(--cl-navy);color:#fff;font-weight:600;letter-spacing:.5px;
+}
+
+/* ============ video stream ============ */
+.mgl-filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.mgl-filter-row button{
+  font-size:13px;padding:7px 16px;border-radius:20px;border:1px solid var(--cl-line);
+  background:#fff;color:#3a4a68;transition:.2s;
+}
+.mgl-filter-row button.active,.mgl-filter-row button:hover{
+  background:var(--cl-navy);color:#fff;border-color:var(--cl-navy);
+}
+.mgl-video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mgl-video-card{
+  background:#fff;border-radius:var(--rd-md);overflow:hidden;
+  border:1px solid var(--cl-line);box-shadow:var(--sh-soft);transition:.24s;
+  display:flex;flex-direction:column;
+}
+.mgl-video-card:hover{transform:translateY(-6px);box-shadow:var(--sh-hover)}
+.mgl-video-cover{position:relative;aspect-ratio:16/9;overflow:hidden;background:#dfe7f2}
+.mgl-video-cover img{width:100%;height:100%;object-fit:cover;transition:.45s}
+.mgl-video-card:hover .mgl-video-cover img{transform:scale(1.06)}
+.mgl-cover-tag{
+  position:absolute;left:10px;top:10px;font-size:11px;padding:2px 9px;border-radius:12px;
+  background:rgba(16,24,40,.78);color:#fff;backdrop-filter:blur(4px);
+}
+.mgl-cover-time{
+  position:absolute;right:10px;bottom:10px;font-size:11px;padding:1px 8px;border-radius:9px;
+  background:rgba(16,24,40,.78);color:#fff;
+}
+.mgl-video-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.9);
+  width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.9);
+  display:grid;place-items:center;opacity:0;transition:.28s;
+}
+.mgl-video-play::after{
+  content:"";width:0;height:0;border-left:14px solid var(--cl-navy);
+  border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px;
+}
+.mgl-video-card:hover .mgl-video-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.mgl-video-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.mgl-video-body h3{font-size:15.5px;line-height:1.45;color:var(--cl-navy);margin-bottom:7px}
+.mgl-video-body p{font-size:12.5px;color:var(--cl-muted);margin-bottom:12px;flex:1}
+.mgl-video-foot{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.mgl-author{display:flex;align-items:center;gap:7px;font-size:12px;color:#3a4a68;cursor:pointer}
+.mgl-avatar{
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  font-size:11px;font-weight:700;color:#fff;flex:none;
+}
+.mgl-video-actions{display:flex;gap:10px;font-size:12px;color:var(--cl-muted)}
+.mgl-act{display:inline-flex;align-items:center;gap:3px;transition:.2s}
+.mgl-act:hover{color:var(--cl-coral)}
+.mgl-act.liked{color:var(--cl-coral);font-weight:700}
+.mgl-act.faved{color:#e5a30a;font-weight:700}
+
+/* ============ topics ============ */
+.mgl-topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.mgl-topic-card{
+  border-radius:var(--rd-md);overflow:hidden;position:relative;min-height:210px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  color:#fff;box-shadow:var(--sh-soft);transition:.24s;
+}
+.mgl-topic-card:hover{transform:translateY(-5px);box-shadow:var(--sh-hover)}
+.mgl-topic-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mgl-topic-card::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(9,16,32,.06) 28%,rgba(9,16,32,.86));
+}
+.mgl-topic-body{position:relative;z-index:2;padding:18px}
+.mgl-topic-body h3{font-size:16px;margin-bottom:6px}
+.mgl-topic-body p{font-size:12px;opacity:.82;line-height:1.6}
+.mgl-topic-state{font-size:11px;color:var(--cl-mint);margin-top:9px;letter-spacing:1px;display:block}
+
+/* ============ creators ============ */
+.mgl-creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mgl-creator-card{
+  background:#fff;border:1px solid var(--cl-line);border-radius:var(--rd-md);
+  padding:22px;box-shadow:var(--sh-soft);transition:.24s;cursor:pointer;
+}
+.mgl-creator-card:hover{transform:translateY(-5px);box-shadow:var(--sh-hover);border-color:#c8e8de}
+.mgl-creator-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.mgl-creator-avatar{
+  width:56px;height:56px;border-radius:18px;display:grid;place-items:center;
+  font-size:20px;font-weight:800;color:#fff;flex:none;letter-spacing:1px;
+}
+.mgl-creator-top b{font-size:16px;color:var(--cl-navy);display:block}
+.mgl-creator-top small{font-size:12px;color:var(--cl-muted)}
+.mgl-creator-card p{font-size:13px;color:#4a5a78;margin-bottom:14px;min-height:44px}
+.mgl-creator-stats{display:flex;gap:22px;font-size:12px;color:var(--cl-muted);border-top:1px dashed #e7ecf5;padding-top:12px}
+.mgl-creator-stats b{color:var(--cl-navy);font-size:14px;margin-right:3px}
+
+/* ============ wall ============ */
+.mgl-wall{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.mgl-wall-item{
+  position:relative;border-radius:var(--rd-sm);overflow:hidden;background:#dfe7f2;
+  box-shadow:var(--sh-soft);
+}
+.mgl-wall-item img{width:100%;height:100%;object-fit:cover;transition:.45s}
+.mgl-wall-item:hover img{transform:scale(1.07)}
+.mgl-wall-item span{
+  position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;
+  font-size:12px;color:#fff;
+  background:linear-gradient(180deg,transparent,rgba(8,14,28,.82));
+  opacity:0;transition:.28s;
+}
+.mgl-wall-item:hover span{opacity:1}
+.mgl-w-a{grid-column:span 5;aspect-ratio:16/10}
+.mgl-w-b{grid-column:span 4;aspect-ratio:4/3}
+.mgl-w-c{grid-column:span 3;aspect-ratio:1/1}
+.mgl-w-d{grid-column:span 3;aspect-ratio:4/3}
+.mgl-w-e{grid-column:span 6;aspect-ratio:16/9}
+
+/* ============ reviews ============ */
+.mgl-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.mgl-review-card{
+  background:#fff;border-radius:var(--rd-md);padding:20px;border:1px solid var(--cl-line);
+  box-shadow:var(--sh-soft);display:flex;flex-direction:column;gap:10px;transition:.24s;
+}
+.mgl-review-card:nth-child(2){background:#0f1a30;color:#dfe8f7;border-color:#1d2d4c}
+.mgl-review-card:nth-child(2) .mgl-review-name b{color:#fff}
+.mgl-review-card:nth-child(2) p{color:#c3d1e6}
+.mgl-review-card:hover{transform:translateY(-4px)}
+.mgl-review-stars{color:var(--cl-gold);font-size:13px;letter-spacing:2px}
+.mgl-review-card p{font-size:13px;color:#42506b;line-height:1.72}
+.mgl-review-name{display:flex;align-items:center;gap:9px;margin-top:auto}
+.mgl-review-name b{font-size:13px;color:var(--cl-navy);display:block}
+.mgl-review-name small{font-size:11px;color:var(--cl-muted)}
+
+/* ============ news ============ */
+.mgl-news-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:30px}
+.mgl-news-lead{
+  background:linear-gradient(150deg,#101828,#1b2c4e);
+  color:#e7eefb;border-radius:var(--rd-lg);padding:30px;box-shadow:var(--sh-soft);
+}
+.mgl-news-lead .mgl-chip{background:var(--cl-mint);color:#062a22}
+.mgl-news-lead h3{font-size:20px;margin:14px 0 10px;line-height:1.4}
+.mgl-news-lead p{font-size:13.5px;color:#b9c8e0}
+.mgl-news-lead time{font-size:11.5px;color:#8fa4c4;display:block;margin-top:16px;letter-spacing:1px}
+.mgl-news-list{display:flex;flex-direction:column}
+.mgl-news-item{
+  padding:17px 4px;border-bottom:1px dashed #e2e8f2;display:flex;gap:16px;align-items:flex-start;
+}
+.mgl-news-item:last-child{border-bottom:none}
+.mgl-news-date{
+  flex:none;width:62px;font-size:11.5px;color:#12a585;font-weight:700;letter-spacing:.5px;
+}
+.mgl-news-item h4{font-size:14.5px;color:var(--cl-navy);margin-bottom:5px}
+.mgl-news-item p{font-size:12.5px;color:var(--cl-muted)}
+
+/* ============ faq ============ */
+.mgl-faq{display:flex;flex-direction:column;gap:12px;max-width:900px}
+.mgl-faq details{
+  background:#fff;border:1px solid var(--cl-line);border-radius:var(--rd-sm);
+  padding:0 18px;box-shadow:var(--sh-soft);transition:.2s;
+}
+.mgl-faq details[open]{border-color:#bfe7dc;box-shadow:0 12px 28px rgba(19,32,58,.10)}
+.mgl-faq summary{
+  list-style:none;cursor:pointer;font-size:14.5px;font-weight:600;color:var(--cl-navy);
+  padding:16px 0;position:relative;padding-right:30px;
+}
+.mgl-faq summary::-webkit-details-marker{display:none}
+.mgl-faq summary::after{
+  content:"+";position:absolute;right:0;top:14px;font-size:20px;color:#12a585;font-weight:400;
+}
+.mgl-faq details[open] summary::after{content:"−"}
+.mgl-faq p{font-size:13.5px;color:#4a5a78;padding:0 0 16px;line-height:1.8}
+
+/* ============ contact ============ */
+.mgl-contact{
+  background:linear-gradient(135deg,#0e1730,#16304f 55%,#0b6a56);
+  border-radius:26px;padding:46px 40px;color:#fff;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;
+  box-shadow:0 24px 50px rgba(11,24,46,.28);
+}
+.mgl-contact h2{font-size:29px;letter-spacing:1px;margin-bottom:12px}
+.mgl-contact p{font-size:14px;color:#c2d2e8;margin-bottom:20px;max-width:460px}
+.mgl-contact-actions{display:flex;gap:12px;flex-wrap:wrap}
+.mgl-contact-info{display:flex;flex-direction:column;gap:16px}
+.mgl-contact-row{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:#dbe6f7}
+.mgl-contact-row i{
+  flex:none;width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.12);
+  display:grid;place-items:center;font-style:normal;font-size:15px;
+}
+
+/* ============ footer ============ */
+.mgl-footer{background:#0b1224;color:#93a6c2;padding:52px 0 26px;margin-top:0}
+.mgl-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:34px}
+.mgl-footer h4{color:#fff;font-size:14px;margin-bottom:14px;letter-spacing:1px}
+.mgl-footer a,.mgl-footer p{font-size:12.5px;line-height:2;color:#93a6c2}
+.mgl-footer a:hover{color:var(--cl-mint)}
+.mgl-footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.mgl-footer-logo strong{color:#fff;font-size:17px;letter-spacing:1px}
+.mgl-footer-bottom{
+  border-top:1px solid #1c2740;padding-top:20px;display:flex;justify-content:space-between;
+  gap:14px;flex-wrap:wrap;font-size:12px;color:#6f83a3;
+}
+
+/* ============ toast & modal ============ */
+.mgl-toast{
+  position:fixed;left:50%;bottom:36px;transform:translate(-50%,22px);
+  background:rgba(16,24,40,.94);color:#fff;font-size:13.5px;padding:11px 24px;border-radius:24px;
+  opacity:0;pointer-events:none;transition:.3s;z-index:400;box-shadow:0 14px 34px rgba(0,0,0,.3);
+}
+.mgl-toast.show{opacity:1;transform:translate(-50%,0)}
+.mgl-modal{
+  position:fixed;inset:0;background:rgba(9,16,30,.62);display:none;place-items:center;
+  z-index:500;padding:22px;backdrop-filter:blur(3px);
+}
+.mgl-modal.open{display:grid}
+.mgl-modal-box{
+  background:#fff;border-radius:20px;max-width:480px;width:100%;padding:30px 28px;
+  box-shadow:0 30px 60px rgba(0,0,0,.32);position:relative;animation:mglPop .26s ease;
+}
+@keyframes mglPop{from{transform:translateY(14px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+.mgl-modal-box h3{font-size:20px;color:var(--cl-navy);margin-bottom:8px}
+.mgl-modal-box > p{font-size:13.5px;color:var(--cl-muted);margin-bottom:18px}
+.mgl-modal-close{
+  position:absolute;right:16px;top:14px;width:30px;height:30px;border-radius:50%;
+  background:#eef2f8;font-size:16px;color:#57678a;display:grid;place-items:center;
+}
+.mgl-modal-field{margin-bottom:13px}
+.mgl-modal-field label{display:block;font-size:12.5px;color:#41506d;margin-bottom:5px;font-weight:600}
+.mgl-modal-field input,.mgl-modal-field textarea,.mgl-modal-field select{
+  width:100%;border:1px solid var(--cl-line);border-radius:9px;padding:10px 12px;font-size:13.5px;
+  font-family:inherit;outline:none;background:#fbfcfe;color:var(--cl-ink);
+}
+.mgl-modal-field textarea{resize:vertical;min-height:86px}
+.mgl-modal-field input:focus,.mgl-modal-field textarea:focus,.mgl-modal-field select:focus{
+  border-color:var(--cl-mint);background:#fff;
+}
+.mgl-modal-submit{width:100%;justify-content:center;margin-top:6px}
+.mgl-share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.mgl-share-row button{
+  flex:1;min-width:88px;padding:12px 8px;border-radius:11px;background:#f2f5fa;font-size:13px;
+  color:#2c3a55;font-weight:600;transition:.2s;
+}
+.mgl-share-row button:hover{background:var(--cl-mint-soft);color:#0d7a60}
+
+/* ============ back to top ============ */
+.mgl-top-btn{
+  position:fixed;right:24px;bottom:28px;width:46px;height:46px;border-radius:50%;
+  background:var(--cl-navy);color:#fff;font-size:18px;display:grid;place-items:center;
+  box-shadow:0 12px 26px rgba(16,24,40,.3);opacity:0;pointer-events:none;transition:.3s;z-index:300;
+}
+.mgl-top-btn.show{opacity:1;pointer-events:auto}
+.mgl-top-btn:hover{background:#243a5c;transform:translateY(-3px)}
+
+/* ============ responsive ============ */
+@media(max-width:1080px){
+  .mgl-hero-grid{grid-template-columns:1fr;gap:32px}
+  .mgl-about-grid{grid-template-columns:1fr}
+  .mgl-feature-grid{grid-template-columns:1fr}
+  .mgl-topic-grid{grid-template-columns:repeat(2,1fr)}
+  .mgl-video-grid{grid-template-columns:repeat(2,1fr)}
+  .mgl-creator-grid{grid-template-columns:repeat(2,1fr)}
+  .mgl-review-grid{grid-template-columns:repeat(2,1fr)}
+  .mgl-news-grid{grid-template-columns:1fr}
+  .mgl-contact{grid-template-columns:1fr;padding:34px 26px}
+  .mgl-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .mgl-nav{display:none}
+  .mgl-burger{display:grid;place-items:center}
+  .mgl-head-tools .mgl-search{display:none}
+  .mgl-header-inner{height:62px;gap:14px}
+}
+@media(max-width:640px){
+  .mgl-wrap{padding:0 16px}
+  .mgl-header-inner{padding:0 16px}
+  .mgl-section{padding:44px 0}
+  .mgl-video-grid,.mgl-creator-grid,.mgl-review-grid,.mgl-feature-side{grid-template-columns:1fr}
+  .mgl-topic-grid{grid-template-columns:1fr}
+  .mgl-hero{padding:34px 0 20px}
+  .mgl-hero-facts{gap:18px}
+  .mgl-fact b{font-size:22px}
+  .mgl-w-a,.mgl-w-b,.mgl-w-c,.mgl-w-d,.mgl-w-e{grid-column:span 12;aspect-ratio:16/10}
+  .mgl-footer-grid{grid-template-columns:1fr}
+  .mgl-contact h2{font-size:23px}
+  .mgl-top-btn{right:14px;bottom:18px}
+  .mgl-notice-list{font-size:12px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="mgl-sticky-wrap" id="mglTop">
+  <div class="mgl-notice">
+    <div class="mgl-notice-inner">
+      <span class="mgl-notice-tag">官方发布</span>
+      <div class="mgl-notice-list">
+        <b>11月18日</b> 磁力联盟「冬季影像企划」正式启动报名，新增 36 部原创精品内容上线；<b>11月15日</b> 创作者扶持计划第三期开放申请，欢迎投稿参与挑战。
+      </div>
+      <a class="mgl-notice-more" href="#mglNews">全部动态</a>
+    </div>
+  </div>
+  <header class="mgl-header">
+    <div class="mgl-header-inner">
+      <a class="mgl-logo" href="#mglTop" aria-label="磁力联盟官网首页">
+        <span class="mgl-logo-mark"><span>磁</span></span>
+        <span class="mgl-logo-txt"><strong>磁力联盟</strong><em>MAGNET UNION</em></span>
+      </a>
+      <nav class="mgl-nav" aria-label="主导航">
+        <a href="#mglTop">首页</a>
+        <a href="#mglFeature">视频焦点</a>
+        <a href="#mglVideos">精品内容</a>
+        <a href="#mglTopics">专题企划</a>
+        <a href="#mglCreators">创作者</a>
+        <a href="#mglNews">企业动态</a>
+        <a href="#mglFaq">帮助</a>
+        <a href="#mglContact">联系</a>
+      </nav>
+      <div class="mgl-head-tools">
+        <div class="mgl-search">
+          <input id="mglSearchInput" type="search" placeholder="搜索内容 / 创作者" aria-label="站内搜索">
+          <button id="mglSearchBtn" type="button" aria-label="搜索">🔍</button>
+          <div class="mgl-search-feedback" id="mglSearchFeedback"></div>
+        </div>
+        <button class="mgl-btn mgl-btn-mint mgl-btn-sm" data-open-modal="submit">投稿入口</button>
+        <button class="mgl-burger" id="mglBurger" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+    <nav class="mgl-mobile-nav" id="mglMobileNav" aria-label="移动端导航">
+      <a href="#mglTop">首页</a>
+      <a href="#mglFeature">视频焦点</a>
+      <a href="#mglVideos">精品内容</a>
+      <a href="#mglTopics">专题企划</a>
+      <a href="#mglCreators">创作者</a>
+      <a href="#mglNews">企业动态</a>
+      <a href="#mglFaq">帮助</a>
+      <a href="#mglContact">联系</a>
+    </nav>
+  </header>
+</div>
+
+<main>
+
+<!-- ========== 首屏 ========== -->
+<section class="mgl-hero">
+  <div class="mgl-wrap">
+    <div class="mgl-hero-grid">
+      <div>
+        <span class="mgl-hero-badge"><i></i>磁力联盟 · 官方网站 · 企业级视频品牌</span>
+        <h1 class="mgl-h1">磁力<span>联盟</span></h1>
+        <p class="mgl-hero-slogan">让每一次创作，都产生吸引力</p>
+        <p class="mgl-hero-desc">
+          磁力联盟是面向创作者与企业的原创视频内容品牌，以高清影像、专业策划与持续运营为核心，
+          构建值得信赖的内容生态。我们深耕影像表达的垂直领域，用真实的镜头记录行业进步与生活温度，
+          为每一位用户提供有品质、有口碑的精品内容。
+        </p>
+        <div class="mgl-hero-cta">
+          <a class="mgl-btn mgl-btn-primary" href="#mglFeature">进入视频焦点</a>
+          <a class="mgl-btn mgl-btn-ghost" href="#mglCreators">认识创作者</a>
+          <button class="mgl-btn mgl-btn-ghost" data-open-modal="submit">我要投稿</button>
+        </div>
+        <div class="mgl-hero-facts">
+          <div class="mgl-fact"><b>1.8<i>万+</i></b><small>原创影像作品</small></div>
+          <div class="mgl-fact"><b>320<i>+</i></b><small>签约创作者</small></div>
+          <div class="mgl-fact"><b>7<i>年</i></b><small>持续运营</small></div>
+        </div>
+      </div>
+      <div class="mgl-hero-visual">
+        <img alt="磁力联盟官方主视觉：夜间摄影棚内的导演与摄影机" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='sky1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f1a30'/%3E%3Cstop offset='0.55' stop-color='%231b3557'/%3E%3Cstop offset='1' stop-color='%230b6a56'/%3E%3C/linearGradient%3E%3CradialGradient id='glow1' cx='0.72' cy='0.28' r='0.5'%3E%3Cstop offset='0' stop-color='%2322d3a5' stop-opacity='0.55'/%3E%3Cstop offset='1' stop-color='%2322d3a5' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23sky1)'/%3E%3Crect width='800' height='550' fill='url(%23glow1)'/%3E%3Ccircle cx='590' cy='160' r='120' fill='%23ff6b4a' opacity='0.18'/%3E%3Ccircle cx='590' cy='160' r='64' fill='%23ff6b4a' opacity='0.42'/%3E%3Cpath d='M0 430 Q170 350 340 420 T800 400 L800 550 L0 550Z' fill='%230a1526' opacity='0.9'/%3E%3Cg fill='%230a1526'%3E%3Crect x='120' y='250' width='14' height='220'/%3E%3Crect x='150' y='270' width='10' height='200'/%3E%3Cpolygon points='120,250 176,278 120,306'/%3E%3C/g%3E%3Crect x='260' y='330' width='150' height='96' rx='10' fill='%23152844' stroke='%2322d3a5' stroke-width='3'/%3E%3Ccircle cx='300' cy='358' r='17' fill='none' stroke='%2322d3a5' stroke-width='4'/%3E%3Ccircle cx='372' cy='358' r='17' fill='none' stroke='%2322d3a5' stroke-width='4'/%3E%3Crect x='455' y='300' width='58' height='130' rx='8' fill='%23ff6b4a'/%3E%3Ccircle cx='484' cy='288' r='26' fill='%23f6c453'/%3E%3Crect x='600' y='340' width='120' height='90' rx='12' fill='%23152844' stroke='%2338bdf8' stroke-width='3'/%3E%3Cpath d='M636 385 l28 -16 v32 z' fill='%2338bdf8'/%3E%3Cg stroke='%2322d3a5' stroke-width='3' opacity='0.75'%3E%3Cline x1='40' y1='120' x2='120' y2='120'/%3E%3Cline x1='40' y1='140' x2='96' y2='140'/%3E%3Cline x1='40' y1='160' x2='112' y2='160'/%3E%3C/g%3E%3C/svg%3E">
+        <div class="mgl-hero-float">
+          <span class="mgl-chip" style="background:#ff6b4a">企划</span>
+          <div>
+            <strong>冬季影像企划 · 第一期</strong>
+            <small>36 部原创精品内容同步上线</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 关键词定位与解析 ========== -->
+<section class="mgl-section" id="mglAbout">
+  <div class="mgl-wrap">
+    <div class="mgl-sec-head">
+      <div>
+        <p class="mgl-sec-eyebrow">ABOUT MAGNET UNION</p>
+        <h2 class="mgl-h2">磁力联盟是什么：一个企业级视频品牌的内容定位与深度解析</h2>
+        <p class="mgl-sec-sub">从品牌理念到内容生态，理解磁力联盟为何值得信赖。</p>
+      </div>
+      <a class="mgl-link-more" href="#mglContact">了解品牌故事 →</a>
+    </div>
+    <div class="mgl-about-grid">
+      <article class="mgl-about-card">
+        <h3>品牌定位：以吸引力为核心的内容生态</h3>
+        <p>
+          磁力联盟成立于 2019 年，是一家持续运营的原创视频品牌企业。品牌名称中的“磁力”，
+          指向的是一种把人与内容、创作者与观众自然拉近的力量。我们相信，优质影像不必喧哗，
+          只要足够真实、足够专业，就能产生持久的吸引力。围绕这一理念，磁力联盟官方网站
+          逐步搭建起覆盖策划、拍摄、后期、发行与社区运营的完整链条，形成兼具企业级规范与
+          创作者温度的垂直领域内容生态。
+        </p>
+        <p>
+          作为行业中稳步成长的视频品牌，磁力联盟不追逐短期的流量峰值，而更重视内容的长期价值。
+          我们为每一位入驻创作者提供标准化的制作支持，从选题会到成片审看，从封面设计到发布节奏，
+          都有专业团队陪伴。这样的机制让“磁力联盟”三个字逐渐成为品质与口碑的代名词，
+          也让更多用户在搜索原创影像时，愿意把磁力联盟作为首选入口。
+        </p>
+        <h3 style="margin-top:22px">内容方向：多元而克制</h3>
+        <p>
+          磁力联盟的内容版图以影像表达为轴心，向人物访谈、城市探索、创作幕后、行业观察、
+          实用技巧等方向延展。我们既关注宏大的行业变迁，也记录一顿家常菜、一次深夜剪辑、
+          一段安静的城市清晨。多元意味着容纳不同声音，包容意味着给新人成长的空间。
+          磁力联盟希望用镜头把真实的力量留存下来，让每一次观看都成为一次温暖的陪伴。
+        </p>
+        <p>
+          为了让内容更有秩序地生长，磁力联盟搭建了专题企划机制。每一季度，编辑部会与创作者
+          共同确定 3 至 5 个主题方向，鼓励大家用不同视角回应同一主题。这种既统一又开放的
+          生产方式，让磁力联盟的精品内容保持辨识度，也让创作者保有充分的表达自由。
+        </p>
+        <div class="mgl-tag-cloud">
+          <span>原创影像</span><span>高清内容</span><span>创作者社区</span>
+          <span>精品企划</span><span>行业观察</span><span>人物访谈</span>
+          <span>持续运营</span><span>值得信赖</span>
+        </div>
+      </article>
+      <aside class="mgl-about-card">
+        <h3>品牌脉络与关键节点</h3>
+        <div class="mgl-about-timeline">
+          <div class="mgl-tl-item">
+            <span class="mgl-tl-dot"></span>
+            <div><b>2019 · 品牌创立</b><small>磁力联盟以三人小组起步，发布第一批城市纪录短片。</small></div>
+          </div>
+          <div class="mgl-tl-item">
+            <span class="mgl-tl-dot"></span>
+            <div><b>2021 · 创作者计划</b><small>签约创作者突破 100 位，建立标准化内容生产流程。</small></div>
+          </div>
+          <div class="mgl-tl-item">
+            <span class="mgl-tl-dot"></span>
+            <div><b>2023 · 专题企划体系</b><small>推出季度专题机制，原创作品累计突破一万部。</small></div>
+          </div>
+          <div class="mgl-tl-item">
+            <span class="mgl-tl-dot"></span>
+            <div><b>2025 · 内容生态升级</b><small>上线创作者成长中心，强化版权保护与品质审核。</small></div>
+          </div>
+          <div class="mgl-tl-item">
+            <span class="mgl-tl-dot"></span>
+            <div><b>2026 · 冬季影像企划</b><small>新一期企划启动报名，开放 36 个精品内容席位。</small></div>
+          </div>
+        </div>
+        <h3 style="margin-top:24px">我们坚持的三件事</h3>
+        <p style="margin-bottom:10px">
+          <strong style="color:#0d7a60">一、正版与原创。</strong>
+          磁力联盟所有内容均来自签约创作者或官方自制，版权清晰、来源可溯，这是平台立足的根本。
+        </p>
+        <p style="margin-bottom:10px">
+          <strong style="color:#0d7a60">二、品质与口碑。</strong>
+          从画面稳定度到声音处理，从叙事节奏到封面信息，我们以企业级标准打磨每一个细节。
+        </p>
+        <p>
+          <strong style="color:#0d7a60">三、用户至上。</strong>
+          磁力联盟的每一次改版、每一场挑战赛、每一条评论回应，都来自真实的用户反馈。
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 焦点视频 ========== -->
+<section class="mgl-section mgl-section-alt mgl-anchor" id="mglFeature">
+  <div class="mgl-wrap">
+    <div class="mgl-sec-head">
+      <div>
+        <p class="mgl-sec-eyebrow">VIDEO FOCUS</p>
+        <h2 class="mgl-h2">视频焦点 · 本周值得停留的影像</h2>
+        <p class="mgl-sec-sub">由磁力联盟编辑部与创作者共同推选，每周更新。</p>
+      </div>
+      <a class="mgl-link-more" href="#mglVideos">查看全部精品内容 →</a>
+    </div>
+    <div class="mgl-feature-grid">
+      <article class="mgl-feature-main">
+        <img alt="焦点视频封面：城市天台上的黄昏访谈现场" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 780 700'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='0.9' y2='1'%3E%3Cstop offset='0' stop-color='%23f6c453'/%3E%3Cstop offset='0.45' stop-color='%23ff6b4a'/%3E%3Cstop offset='1' stop-color='%237a2c4a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='780' height='700' fill='url(%23f1)'/%3E%3Ccircle cx='600' cy='180' r='90' fill='%23fff3d6' opacity='0.6'/%3E%3Cg fill='%232a1a2e' opacity='0.86'%3E%3Crect x='0' y='470' width='780' height='230'/%3E%3Crect x='60' y='300' width='90' height='200'/%3E%3Crect x='170' y='240' width='70' height='260'/%3E%3Crect x='260' y='330' width='110' height='170'/%3E%3Crect x='390' y='200' width='80' height='300'/%3E%3Crect x='490' y='300' width='120' height='200'/%3E%3Crect x='630' y='250' width='90' height='250'/%3E%3C/g%3E%3Cg fill='%23ffe9b8' opacity='0.9'%3E%3Crect x='80' y='330' width='16' height='22'/%3E%3Crect x='112' y='380' width='16' height='22'/%3E%3Crect x='186' y='280' width='14' height='20'/%3E%3Crect x='410' y='240' width='14' height='20'/%3E%3Crect x='440' y='300' width='14' height='20'/%3E%3Crect x='660' y='290' width='16' height='22'/%3E%3C/g%3E%3Cg fill='%231b1226'%3E%3Ccircle cx='300' cy='470' r='34'/%3E%3Crect x='270' y='500' width='60' height='90' rx='16'/%3E%3Ccircle cx='430' cy='460' r='30'/%3E%3Crect x='402' y='488' width='56' height='104' rx='16'/%3E%3C/g%3E%3Crect x='330' y='560' width='90' height='12' rx='6' fill='%2322d3a5'/%3E%3C/svg%3E">
+        <div class="mgl-feature-cover-mask"></div>
+        <div class="mgl-feature-info">
+          <span class="mgl-chip">焦点首播</span>
+          <h3>《天台上的十三个问题》——与城市观察者聊一聊我们为什么爱拍黄昏</h3>
+          <p>磁力联盟人物访谈系列第 4 期，一位拍了七年城市黄昏的创作者，讲述镜头背后关于耐心与等待的故事。</p>
+        </div>
+      </article>
+      <div class="mgl-feature-side">
+        <article class="mgl-mini-card">
+          <div class="mgl-mini-thumb">
+            <img alt="小视频封面：老式剪辑台上的胶片与时间码" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23142034'/%3E%3Crect x='40' y='60' width='300' height='150' rx='10' fill='%231d2f4c' stroke='%2338bdf8' stroke-width='3'/%3E%3Ccircle cx='110' cy='135' r='42' fill='none' stroke='%2322d3a5' stroke-width='6'/%3E%3Ccircle cx='110' cy='135' r='10' fill='%2322d3a5'/%3E%3Ccircle cx='250' cy='135' r='42' fill='none' stroke='%23ff6b4a' stroke-width='6'/%3E%3Ccircle cx='250' cy='135' r='10' fill='%23ff6b4a'/%3E%3Crect x='360' y='80' width='80' height='110' rx='8' fill='%23f6c453' opacity='0.85'/%3E%3Cg stroke='%23ffffff' stroke-width='2' opacity='0.4'%3E%3Cline x1='40' y1='228' x2='440' y2='228'/%3E%3C/g%3E%3C/svg%3E">
+          </div>
+          <div class="mgl-mini-body">
+            <h4>剪辑室凌晨两点：一条片子的最后一次回看</h4>
+            <div class="mgl-mini-meta"><span>创作幕后</span><span>12:40</span></div>
+          </div>
+        </article>
+        <article class="mgl-mini-card">
+          <div class="mgl-mini-thumb">
+            <img alt="小视频封面：老街清晨的菜市场与蒸汽" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23e8f4ee'/%3E%3Crect x='0' y='190' width='480' height='80' fill='%23bcd8c9'/%3E%3Cg fill='%23f2f7f3' opacity='0.9'%3E%3Cellipse cx='120' cy='120' rx='70' ry='46'/%3E%3Cellipse cx='250' cy='104' rx='58' ry='40'/%3E%3Cellipse cx='360' cy='128' rx='64' ry='44'/%3E%3C/g%3E%3Cg fill='%233f7d63'%3E%3Crect x='70' y='150' width='110' height='46' rx='8'/%3E%3Crect x='200' y='140' width='96' height='56' rx='8'/%3E%3Crect x='320' y='152' width='104' height='44' rx='8'/%3E%3C/g%3E%3Ccircle cx='126' cy='172' r='14' fill='%23ff6b4a'/%3E%3Ccircle cx='250' cy='166' r='14' fill='%23f6c453'/%3E%3Ccircle cx='372' cy='174' r='14' fill='%23ff6b4a'/%3E%3C/svg%3E">
+          </div>
+          <div class="mgl-mini-body">
+            <h4>清晨六点的菜市场，是一座城市最诚实的表情</h4>
+            <div class="mgl-mini-meta"><span>城市探索</span><span>09:18</span></div>
+          </div>
+        </article>
+        <article class="mgl-mini-card">
+          <div class="mgl-mini-thumb">
+            <img alt="小视频封面：手作木工台上的刨花与工具" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f3e3cf'/%3E%3Crect x='0' y='170' width='480' height='100' fill='%23c9a06a'/%3E%3Crect x='0' y='164' width='480' height='10' fill='%23a97e4c'/%3E%3Cg stroke='%237a5630' stroke-width='7' stroke-linecap='round'%3E%3Cline x1='60' y1='120' x2='140' y2='120'/%3E%3Cline x1='200' y1='90' x2='300' y2='110'/%3E%3Cline x1='320' y1='130' x2='420' y2='118'/%3E%3C/g%3E%3Cpath d='M120 170 q60 -50 120 0' fill='none' stroke='%23e0b784' stroke-width='9'/%3E%3Crect x='290' y='60' width='18' height='110' rx='6' fill='%238b6540'/%3E%3Crect x='296' y='50' width='60' height='20' rx='8' fill='%235e6b7a'/%3E%3C/svg%3E">
+          </div>
+          <div class="mgl-mini-body">
+            <h4>一把木勺的三小时：手作类影像如何拍出质感</h4>
+            <div class="mgl-mini-meta"><span>实用技巧</span><span>15:02</span></div>
+          </div>
+        </article>
+        <article class="mgl-mini-card">
+          <div class="mgl-mini-thumb">
+            <img alt="小视频封面：夜间公路与车灯轨迹长曝光" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%230b1530'/%3E%3Ccircle cx='380' cy='60' r='34' fill='%23f6f2d8' opacity='0.8'/%3E%3Cg stroke='%2322d3a5' stroke-width='4' fill='none' opacity='0.85'%3E%3Cpath d='M-20 220 Q120 150 260 210 T520 190'/%3E%3C/g%3E%3Cg stroke='%23ff6b4a' stroke-width='4' fill='none' opacity='0.85'%3E%3Cpath d='M-20 250 Q140 190 280 240 T520 220'/%3E%3C/g%3E%3Cg fill='%23101d38'%3E%3Crect x='60' y='150' width='40' height='40' rx='6'/%3E%3Crect x='200' y='160' width='34' height='34' rx='6'/%3E%3Crect x='380' y='148' width='44' height='44' rx='6'/%3E%3C/g%3E%3C/svg%3E">
+          </div>
+          <div class="mgl-mini-body">
+            <h4>跟拍一整夜：公路纪录片的声音设计笔记</h4>
+            <div class="mgl-mini-meta"><span>行业观察</span><span>18:22</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 精品内容视频流 ========== -->
+<section class="mgl-section mgl-anchor" id="mglVideos">
+  <div class="mgl-wrap">
+    <div class="mgl-sec-head">
+      <div>
+        <p class="mgl-sec-eyebrow">CURATED CONTENT</p>
+        <h2 class="mgl-h2">精品内容 · 磁力联盟本周推荐</h2>
+        <p class="mgl-sec-sub">按题材筛选，找到你想停留的那一段影像。</p>
+      </div>
+    </div>
+    <div class="mgl-filter-row" id="mglFilters">
+      <button class="active" data-filter="all">全部</button>
+      <button data-filter="记录">日常记录</button>
+      <button data-filter="访谈">人物访谈</button>
+      <button data-filter="幕后">创作幕后</button>
+      <button data-filter="城市">城市探索</button>
+      <button data-filter="技巧">实用技巧</button>
+      <button data-filter="行业">行业观察</button>
+    </div>
+    <div class="mgl-video-grid" id="mglVideoGrid">
+
+      <article class="mgl-video-card" data-cat="记录">
+        <div class="mgl-video-cover">
+          <img alt="视频封面：窗边的早餐桌与晨光" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23fdf1dc'/%3E%3Crect x='0' y='0' width='200' height='270' fill='%23f9e2bd'/%3E%3Crect x='150' y='30' width='90' height='130' rx='6' fill='%23bfe4f2' stroke='%238fbfd0' stroke-width='5'/%3E%3Crect x='0' y='196' width='480' height='74' fill='%23c98f57'/%3E%3Cellipse cx='300' cy='196' rx='90' ry='16' fill='%23e9c79b'/%3E%3Cellipse cx='300' cy='186' rx='46' ry='12' fill='%23ffffff'/%3E%3Ccircle cx='300' cy='178' r='20' fill='%23ffcf5c'/%3E%3Crect x='252' y='118' width='18' height='60' rx='6' fill='%2387b9a1'/%3E%3Cellipse cx='392' cy='176' rx='30' ry='10' fill='%23ffffff'/%3E%3Crect x='374' y='140' width='36' height='36' rx='6' fill='%23d4e8dc'/%3E%3C/svg%3E">
+          <span class="mgl-cover-tag">日常记录</span>
+          <span class="mgl-cover-time">06:42</span>
+          <span class="mgl-video-play"></span>
+        </div>
+        <div class="mgl-video-body">
+          <h3>六点四十分的一顿早餐，与一杯手冲的耐心</h3>
+          <p>把一天里最初的十五分钟留给自己，磁力联盟日常影像系列的最新一集。</p>
+          <div class="mgl-video-foot">
+            <span class="mgl-author" data-author="林隅"><span class="mgl-avatar" style="background:#22a98b">林</span>林隅</span>
+            <span class="mgl-video-actions">
+              <button class="mgl-act" data-act="like">♡<span>1286</span></button>
+              <button class="mgl-act" data-act="fave">☆收藏</button>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="mgl-video-card" data-cat="访谈">
+        <div class="mgl-video-cover">
+          <img alt="视频封面：录音棚内的麦克风与人物剪影" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23172338'/%3E%3Ccircle cx='240' cy='140' r='110' fill='%23213255'/%3E%3Crect x='222' y='52' width='36' height='90' rx='18' fill='%238fa6c4'/%3E%3Crect x='232' y='142' width='16' height='60' fill='%23556a8a'/%3E%3Cellipse cx='240' cy='212' rx='60' ry='10' fill='%2339486b'/%3E%3Ccircle cx='120' cy='80' r='26' fill='%23ff6b4a' opacity='0.7'/%3E%3Ccircle cx='370' cy='190' r='34' fill='%2322d3a5' opacity='0.6'/%3E%3Cg stroke='%23ffffff' stroke-width='3' opacity='0.35'%3E%3Cline x1='60' y1='210' x2='130' y2='210'/%3E%3Cline x1='60' y1='224' x2='112' y2='224'/%3E%3C/g%3E%3C/svg%3E">
+          <span class="mgl-cover-tag">人物访谈</span>
+          <span class="mgl-cover-time">22:15</span>
+          <span class="mgl-video-play"></span>
+        </div>
+        <div class="mgl-video-body">
+          <h3>她拍了三百位陌生人：关于勇气与镜头的对话</h3>
+          <p>磁力联盟访谈实录，聊一聊被拒绝、被理解，以及按下录制键的那一秒。</p>
+          <div class="mgl-video-foot">
+            <span class="mgl-author" data-author="程未"><span class="mgl-avatar" style="background:#ff6b4a">程</span>程未</span>
+            <span class="mgl-video-actions">
+              <button class="mgl-act" data-act="like">♡<span>2408</span></button>
+              <button class="mgl-act" data-act="fave">☆收藏</button>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="mgl-video-card" data-cat="幕后">
+        <div class="mgl-video-cover">
+          <img alt="视频封面：调色台上的色卡与监视器" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23111c2c'/%3E%3Crect x='40' y='40' width='190' height='120' rx='8' fill='%231e2f4a' stroke='%2338bdf8' stroke-width='3'/%3E%3Cg%3E%3Crect x='56' y='56' width='34' height='26' fill='%23ff6b4a'/%3E%3Crect x='96' y='56' width='34' height='26' fill='%23f6c453'/%3E%3Crect x='136' y='56' width='34' height='26' fill='%2322d3a5'/%3E%3Crect x='56' y='88' width='34' height='26' fill='%2338bdf8'/%3E%3Crect x='96' y='88' width='34' height='26' fill='%23ffffff'/%3E%3Crect x='136' y='88' width='34' height='26' fill='%238e7cf0'/%3E%3Crect x='56' y='120' width='34' height='26' fill='%235a6b85'/%3E%3Crect x='96' y='120' width='74' height='26' fill='%23b9c8e0'/%3E%3C/g%3E%3Crect x='260' y='60' width='180' height='100' rx='8' fill='%23192940'/%3E%3Cpath d='M280 140 L300 100 L320 128 L344 84 L366 118 L396 96 L420 130' fill='none' stroke='%2322d3a5' stroke-width='4'/%3E%3Crect x='120' y='196' width='240' height='16' rx='8' fill='%23243652'/%3E%3Ccircle cx='132' cy='204' r='9' fill='%23ff6b4a'/%3E%3Ccircle cx='348' cy='204' r='9' fill='%2322d3a5'/%3E%3C/svg%3E">
+          <span class="mgl-cover-tag">创作幕后</span>
+          <span class="mgl-cover-time">13:08</span>
+          <span class="mgl-video-play"></span>
+        </div>
+        <div class="mgl-video-body">
+          <h3>一条三分钟短片，为什么调色花了整整两天</h3>
+          <p>走进磁力联盟后期机房，看色彩如何决定情绪的温度。</p>
+          <div class="mgl-video-foot">
+            <span class="mgl-author" data-author="唐叙"><span class="mgl-avatar" style="background:#3a7bd5">唐</span>唐叙</span>
+            <span class="mgl-video-actions">
+              <button class="mgl-act" data-act="like">♡<span>954</span></button>
+              <button class="mgl-act" data-act="fave">☆收藏</button>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="mgl-video-card" data-cat="城市">
+        <div class="mgl-video-cover">
+          <img alt="视频封面：雨后的老城区巷口与倒影" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23839db1'/%3E%3Crect width='480' height='130' fill='%23a9c0d0'/%3E%3Cg fill='%235b7186'%3E%3Crect x='0' y='120' width='110' height='100'/%3E%3Crect x='120' y='96' width='90' height='124'/%3E%3Crect x='220' y='128' width='80' height='92'/%3E%3Crect x='310' y='104' width='100' height='116'/%3E%3Crect x='420' y='132' width='60' height='88'/%3E%3C/g%3E%3Cg fill='%23f3e3b8' opacity='0.85'%3E%3Crect x='24' y='140' width='18' height='22'/%3E%3Crect x='64' y='176' width='18' height='22'/%3E%3Crect x='140' y='120' width='16' height='20'/%3E%3Crect x='340' y='128' width='18' height='22'/%3E%3C/g%3E%3Crect x='0' y='220' width='480' height='50' fill='%236d8496'/%3E%3Cg stroke='%23d9e6ef' stroke-width='3' opacity='0.7'%3E%3Cline x1='40' y1='236' x2='140' y2='236'/%3E%3Cline x1='220' y1='244' x2='360' y2='244'/%3E%3C/g%3E%3C/svg%3E">
+          <span class="mgl-cover-tag">城市探索</span>
+          <span class="mgl-cover-time">11:33</span>
+          <span class="mgl-video-play"></span>
+        </div>
+        <div class="mgl-video-body">
+          <h3>沿着一条巷子走到底：老城区里的十六个门牌</h3>
+          <p>磁力联盟城市影像计划，这一次我们把镜头对准有生活痕迹的街角。</p>
+          <div class="mgl-video-foot">
+            <span class="mgl-author" data-author="沈见"><span class="mgl-avatar" style="background:#6c8cae">沈</span>沈见</span>
+            <span class="mgl-video-actions">
+              <button class="mgl-act" data-act="like">♡<span>1732</span></button>
+              <button class="mgl-act" data-act="fave">☆收藏</button>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="mgl-video-card" data-cat="技巧">
+        <div class="mgl-video-cover">
+          <img alt="视频封面：三脚架与镜头前的桌面静物布光示意图" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23eef3f9'/%3E%3Crect x='0' y='212' width='480' height='58' fill='%23cfdcea'/%3E%3Crect x='70' y='150' width='150' height='62' rx='6' fill='%23ffffff' stroke='%2390a7c0' stroke-width='3'/%3E%3Cellipse cx='146' cy='150' rx='46' ry='12' fill='%23d8e6f3'/%3E%3Ccircle cx='300' cy='96' r='26' fill='%23f6c453'/%3E%3Cg stroke='%23f6c453' stroke-width='4' opacity='0.7'%3E%3Cline x1='300' y1='140' x2='300' y2='176'/%3E%3Cline x1='256' y1='112' x2='222' y2='130'/%3E%3Cline x1='344' y1='112' x2='378' y2='130'/%3E%3C/g%3E%3Crect x='382' y='150' width='16' height='62' fill='%23566b84'/%3E%3Crect x='362' y='132' width='56' height='22' rx='6' fill='%232c3a55'/%3E%3Crect x='230' y='196' width='120' height='8' rx='4' fill='%23a7bacd'/%3E%3C/svg%3E">
+          <span class="mgl-cover-tag">实用技巧</span>
+          <span class="mgl-cover-time">08:56</span>
+          <span class="mgl-video-play"></span>
+        </div>
+        <div class="mgl-video-body">
+          <h3>一盏灯也能拍出质感：桌面静物的三点布光简化版</h3>
+          <p>来自磁力联盟创作学院的实操课，附参数表与常见错误对照。</p>
+          <div class="mgl-video-foot">
+            <span class="mgl-author" data-author="白岫"><span class="mgl-avatar" style="background:#a97e4c">白</span>白岫</span>
+            <span class="mgl-video-actions">
+              <button class="mgl-act" data-act="like">♡<span>3106</span></button>
+              <button class="mgl-act" data-act="fave">☆收藏</button>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="mgl-video-card" data-cat="行业">
+        <div class="mgl-video-cover">
+          <img alt="视频封面：数据图表与摄像器材并置的观察图" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f2f6fb'/%3E%3Crect x='30' y='34' width='250' height='180' rx='10' fill='%23ffffff' stroke='%23d3deea' stroke-width='3'/%3E%3Cg fill='%2322d3a5'%3E%3Crect x='56' y='150' width='26' height='48'/%3E%3Crect x='96' y='120' width='26' height='78'/%3E%3Crect x='136' y='94' width='26' height='104'/%3E%3Crect x='176' y='132' width='26' height='66'/%3E%3Crect x='216' y='68' width='26' height='130'/%3E%3C/g%3E%3Cpath d='M56 142 L110 108 L150 118 L190 78 L240 60' fill='none' stroke='%23ff6b4a' stroke-width='4'/%3E%3Crect x='310' y='60' width='140' height='90' rx='8' fill='%232c3a55'/%3E%3Ccircle cx='380' cy='105' r='26' fill='none' stroke='%2338bdf8' stroke-width='5'/%3E%3Crect x='310' y='168' width='140' height='12' rx='6' fill='%23cfdcea'/%3E%3Crect x='310' y='190' width='96' height='12' rx='6' fill='%23cfdcea'/%3E%3C/svg%3E">
+          <span class="mgl-cover-tag">行业观察</span>
+          <span class="mgl-cover-time">16:40</span>
+          <span class="mgl-video-play"></span>
+        </div>
+        <div class="mgl-video-body">
+          <h3>2026 影像内容观察：短与长之间，观众在寻找什么</h3>
+          <p>磁力联盟年度内容报告解读，用数据与访谈回答行业最关心的问题。</p>
+          <div class="mgl-video-foot">
+            <span class="mgl-author" data-author="联盟编辑部"><span class="mgl-avatar" style="background:#1b2440">编</span>联盟编辑部</span>
+            <span class="mgl-video-actions">
+              <button class="mgl-act" data-act="like">♡<span>862</span></button>
+              <button class="mgl-act" data-act="fave">☆收藏</button>
+            </span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== 专题企划 ========== -->
+<section class="mgl-section mgl-section-alt mgl-anchor" id="mglTopics">
+  <div class="mgl-wrap">
+    <div class="mgl-sec-head">
+      <div>
+        <p class="mgl-sec-eyebrow">SPECIAL PROJECTS</p>
+        <h2 class="mgl-h2">专题企划 · 用同一主题，看见不同的表达</h2>
+        <p class="mgl-sec-sub">每一季，磁力联盟与创作者共同发起新的影像挑战。</p>
+      </div>
+      <button class="mgl-btn mgl-btn-mint mgl-btn-sm" data-open-modal="submit">报名参与挑战</button>
+    </div>
+    <div class="mgl-topic-grid">
+      <article class="mgl-topic-card">
+        <img alt="专题封面：冬日清晨玻璃上的雾气与窗外的树影" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23dbe9f4'/%3E%3Crect x='30' y='30' width='340' height='240' rx='10' fill='%23f3f8fc' opacity='0.8'/%3E%3Cpath d='M60 250 Q120 170 190 220 T370 200 L370 270 L60 270Z' fill='%23a8c4d8'/%3E%3Cg stroke='%2388a9c2' stroke-width='5' stroke-linecap='round' opacity='0.8'%3E%3Cline x1='90' y1='80' x2='150' y2='80'/%3E%3Cline x1='230' y1='110' x2='300' y2='110'/%3E%3Cline x1='120' y1='140' x2='170' y2='140'/%3E%3C/g%3E%3Ccircle cx='320' cy='70' r='24' fill='%23f6c453' opacity='0.8'/%3E%3C/svg%3E">
+        <div class="mgl-topic-body">
+          <h3>冬季影像企划 · 慢下来的季节</h3>
+          <p>围绕寒冷、室内与呼吸感，征集 36 部短片与纪录影像。</p>
+          <span class="mgl-topic-state">● 报名中 · 已收录 18 部</span>
+        </div>
+      </article>
+      <article class="mgl-topic-card">
+        <img alt="专题封面：老街店铺招牌与来往行人剪影" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f2e4cf'/%3E%3Crect x='0' y='200' width='400' height='100' fill='%23cba877'/%3E%3Crect x='40' y='90' width='120' height='110' rx='6' fill='%23fff6e6' stroke='%23a97e4c' stroke-width='5'/%3E%3Crect x='80' y='120' width='40' height='60' fill='%23ff6b4a' opacity='0.8'/%3E%3Crect x='210' y='70' width='150' height='130' rx='6' fill='%23fff6e6' stroke='%23a97e4c' stroke-width='5'/%3E%3Cg stroke='%23a97e4c' stroke-width='6'%3E%3Cline x1='210' y1='70' x2='210' y2='120'/%3E%3Cline x1='360' y1='70' x2='360' y2='120'/%3E%3C/g%3E%3Cg fill='%232c3a55'%3E%3Ccircle cx='150' cy='240' r='16'/%3E%3Crect x='138' y='256' width='24' height='44' rx='10'/%3E%3Ccircle cx='290' cy='246' r='14'/%3E%3Crect x='280' y='260' width='20' height='40' rx='9'/%3E%3C/g%3E%3C/svg%3E">
+        <div class="mgl-topic-body">
+          <h3>一条街的一百种声音</h3>
+          <p>城市声音采集特别企划，鼓励用环境声讲述在地故事。</p>
+          <span class="mgl-topic-state">● 征集中 · 12 位创作者参与</span>
+        </div>
+      </article>
+      <article class="mgl-topic-card">
+        <img alt="专题封面：创作者的手与写满笔记的分镜本" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e9eef6'/%3E%3Crect x='60' y='50' width='280' height='200' rx='8' fill='%23ffffff' stroke='%23c3d1e2' stroke-width='4' transform='rotate(-4 200 150)'/%3E%3Cg fill='none' stroke='%235b7186' stroke-width='3' opacity='0.7' transform='rotate(-4 200 150)'%3E%3Crect x='90' y='80' width='70' height='48'/%3E%3Crect x='180' y='80' width='70' height='48'/%3E%3Crect x='270' y='80' width='48' height='48'/%3E%3Cline x1='90' y1='150' x2='200' y2='150'/%3E%3Cline x1='90' y1='168' x2='230' y2='168'/%3E%3Cline x1='90' y1='186' x2='180' y2='186'/%3E%3C/g%3E%3Ccircle cx='320' cy='230' r='34' fill='%2322d3a5' opacity='0.7'/%3E%3Crect x='60' y='226' width='120' height='14' rx='7' fill='%23bfd3e4'/%3E%3C/svg%3E">
+        <div class="mgl-topic-body">
+          <h3>幕后笔记：一条片子的诞生</h3>
+          <p>公开创作过程的分镜、勘景与失败尝试，分享真实的制作经验。</p>
+          <span class="mgl-topic-state">● 持续更新 · 已发布 24 期</span>
+        </div>
+      </article>
+      <article class="mgl-topic-card">
+        <img alt="专题封面：访谈场景中的两把椅子与柔和顶光" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23243048'/%3E%3Ccircle cx='200' cy='40' r='90' fill='%23f6c453' opacity='0.16'/%3E%3Cellipse cx='200' cy='250' rx='150' ry='30' fill='%23172640'/%3E%3Cg fill='%23d7e3f5'%3E%3Crect x='90' y='140' width='70' height='20' rx='8'/%3E%3Crect x='96' y='160' width='14' height='80' rx='6'/%3E%3Crect x='140' y='160' width='14' height='80' rx='6'/%3E%3Crect x='240' y='140' width='70' height='20' rx='8'/%3E%3Crect x='246' y='160' width='14' height='80' rx='6'/%3E%3Crect x='290' y='160' width='14' height='80' rx='6'/%3E%3C/g%3E%3Ccircle cx='200' cy='118' r='20' fill='%2322d3a5'/%3E%3C/svg%3E">
+        <div class="mgl-topic-body">
+          <h3>面对面：十二位普通人的影像选择</h3>
+          <p>访谈企划第四季，聊一聊为什么有人愿意一直按下录制键。</p>
+          <span class="mgl-topic-state">● 已完结 · 12 期访谈</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 创作者矩阵 ========== -->
+<section class="mgl-section mgl-anchor" id="mglCreators">
+  <div class="mgl-wrap">
+    <div class="mgl-sec-head">
+      <div>
+        <p class="mgl-sec-eyebrow">CREATORS</p>
+        <h2 class="mgl-h2">创作者矩阵 · 磁力联盟的长期伙伴</h2>
+        <p class="mgl-sec-sub">点击卡片可查看创作者档案与代表作品。</p>
+      </div>
+    </div>
+    <div class="mgl-creator-grid">
+      <article class="mgl-creator-card" data-author="林隅">
+        <div class="mgl-creator-top">
+          <span class="mgl-creator-avatar" style="background:#22a98b">林隅</span>
+          <div><b>林隅</b><small>生活方式 · 日常记录</small></div>
+        </div>
+        <p>用最朴素的镜头拍早餐、拍窗台、拍傍晚的阳台。她相信日常本身就有足够的叙述力。</p>
+        <div class="mgl-creator-stats"><span><b>128</b>作品</span><span><b>4.6万</b>关注</span></div>
+      </article>
+      <article class="mgl-creator-card" data-author="程未">
+        <div class="mgl-creator-top">
+          <span class="mgl-creator-avatar" style="background:#ff6b4a">程未</span>
+          <div><b>程未</b><small>人物访谈 · 纪实</small></div>
+        </div>
+        <p>七年街头采访经验，擅长在长时间的对谈中，等待一句真正属于对方的话出现。</p>
+        <div class="mgl-creator-stats"><span><b>96</b>作品</span><span><b>6.2万</b>关注</span></div>
+      </article>
+      <article class="mgl-creator-card" data-author="唐叙">
+        <div class="mgl-creator-top">
+          <span class="mgl-creator-avatar" style="background:#3a7bd5">唐叙</span>
+          <div><b>唐叙</b><small>后期制作 · 创作幕后</small></div>
+        </div>
+        <p>调色师出身，喜欢把技术讲得不枯燥。他的幕后视频总能让新人少走一点弯路。</p>
+        <div class="mgl-creator-stats"><span><b>74</b>作品</span><span><b>3.1万</b>关注</span></div>
+      </article>
+      <article class="mgl-creator-card" data-author="沈见">
+        <div class="mgl-creator-top">
+          <span class="mgl-creator-avatar" style="background:#6c8cae">沈见</span>
+          <div><b>沈见</b><small>城市探索 · 在地文化</small></div>
+        </div>
+        <p>专注老城区影像记录，随身带着一本记满门牌号与店铺故事的笔记本。</p>
+        <div class="mgl-creator-stats"><span><b>152</b>作品</span><span><b>5.4万</b>关注</span></div>
+      </article>
+      <article class="mgl-creator-card" data-author="白岫">
+        <div class="mgl-creator-top">
+          <span class="mgl-creator-avatar" style="background:#a97e4c">白岫</span>
+          <div><b>白岫</b><small>实用技巧 · 教学</small></div>
+        </div>
+        <p>磁力联盟创作学院常驻讲师，擅长把复杂的布光与收音拆成一张清单。</p>
+        <div class="mgl-creator-stats"><span><b>63</b>作品</span><span><b>7.8万</b>关注</span></div>
+      </article>
+      <article class="mgl-creator-card" data-author="顾迟">
+        <div class="mgl-creator-top">
+          <span class="mgl-creator-avatar" style="background:#8e7cf0">顾迟</span>
+          <div><b>顾迟</b><small>行业观察 · 商业分析</small></div>
+        </div>
+        <p>前内容平台运营，习惯用数据和案例说话，为创作者提供冷静的行业视角。</p>
+        <div class="mgl-creator-stats"><span><b>44</b>作品</span><span><b>2.7万</b>关注</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 影像墙 + 随笔 ========== -->
+<section class="mgl-section mgl-section-alt">
+  <div class="mgl-wrap">
+    <div class="mgl-sec-head">
+      <div>
+        <p class="mgl-sec-eyebrow">IMAGE WALL & NOTES</p>
+        <h2 class="mgl-h2">影像墙与创作随笔 · 影像之外的温度</h2>
+        <p class="mgl-sec-sub">来自创作者社区的真实片段，构成磁力联盟的日常质地。</p>
+      </div>
+    </div>
+    <div class="mgl-wall" style="margin-bottom:38px">
+      <figure class="mgl-wall-item mgl-w-a">
+        <img alt="影像墙：清晨河岸边的长跑者与薄雾" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3Crect width='600' height='375' fill='%23cfe2ea'/%3E%3Ccircle cx='470' cy='80' r='44' fill='%23fbe9bd' opacity='0.9'/%3E%3Crect x='0' y='230' width='600' height='145' fill='%23a9c9d6'/%3E%3Cpath d='M0 250 Q150 220 300 248 T600 236 L600 300 L0 300Z' fill='%238bb0c2'/%3E%3Cg fill='%232c3a55'%3E%3Ccircle cx='200' cy='196' r='12'/%3E%3Crect x='190' y='208' width='20' height='40' rx='8'/%3E%3Cline x1='190' y1='248' x2='182' y2='280' stroke='%232c3a55' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='210' y1='248' x2='222' y2='278' stroke='%232c3a55' stroke-width='7' stroke-linecap='round'/%3E%3C/g%3E%3Cg fill='%235b7186' opacity='0.6'%3E%3Crect x='420' y='180' width='10' height='70'/%3E%3Ccircle cx='425' cy='170' r='24'/%3E%3C/g%3E%3C/svg%3E">
+        <span>清晨河岸 · 林隅</span>
+      </figure>
+      <figure class="mgl-wall-item mgl-w-b">
+        <img alt="影像墙：桌面上散落的胶片与手写标签" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Crect width='480' height='360' fill='%23e7dcc9'/%3E%3Crect x='40' y='60' width='180' height='120' rx='6' fill='%23f2ece0' stroke='%23a97e4c' stroke-width='3' transform='rotate(-8 130 120)'/%3E%3Crect x='220' y='100' width='180' height='120' rx='6' fill='%23f2ece0' stroke='%23a97e4c' stroke-width='3' transform='rotate(6 310 160)'/%3E%3Cg fill='%232c3a55' opacity='0.7'%3E%3Crect x='60' y='80' width='40' height='26' rx='3' transform='rotate(-8 130 120)'/%3E%3Crect x='110' y='80' width='40' height='26' rx='3' transform='rotate(-8 130 120)'/%3E%3Crect x='240' y='120' width='40' height='26' rx='3' transform='rotate(6 310 160)'/%3E%3C/g%3E%3Crect x='120' y='240' width='240' height='16' rx='8' fill='%23c9a06a'/%3E%3Ccircle cx='380' cy='290' r='26' fill='%23ff6b4a' opacity='0.8'/%3E%3C/svg%3E">
+        <span>胶片与标签 · 唐叙</span>
+      </figure>
+      <figure class="mgl-wall-item mgl-w-c">
+        <img alt="影像墙：夜晚便利店的暖色灯光" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%230d1728'/%3E%3Crect x='70' y='120' width='260' height='200' rx='8' fill='%23f6e3b4'/%3E%3Crect x='70' y='120' width='260' height='40' fill='%23ff6b4a' opacity='0.8'/%3E%3Cg fill='%232c3a55' opacity='0.55'%3E%3Crect x='96' y='180' width='50' height='80'/%3E%3Crect x='162' y='180' width='50' height='80'/%3E%3Crect x='228' y='180' width='50' height='80'/%3E%3C/g%3E%3Crect x='40' y='320' width='320' height='18' fill='%231a2a44'/%3E%3Ccircle cx='340' cy='70' r='26' fill='%23f6f2d8' opacity='0.7'/%3E%3C/svg%3E">
+        <span>便利店 · 沈见</span>
+      </figure>
+      <figure class="mgl-wall-item mgl-w-d">
+        <img alt="影像墙：录音室里的耳机与音频波形" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Crect width='480' height='360' fill='%23192436'/%3E%3Cpath d='M90 220 v-60 a70 70 0 0 1 140 0 v60' fill='none' stroke='%2322d3a5' stroke-width='14'/%3E%3Crect x='78' y='206' width='34' height='60' rx='14' fill='%23ff6b4a'/%3E%3Crect x='208' y='206' width='34' height='60' rx='14' fill='%23ff6b4a'/%3E%3Cg stroke='%2338bdf8' stroke-width='4' stroke-linecap='round'%3E%3Cline x1='300' y1='240' x2='300' y2='180'/%3E%3Cline x1='320' y1='260' x2='320' y2='160'/%3E%3Cline x1='340' y1='240' x2='340' y2='190'/%3E%3Cline x1='360' y1='256' x2='360' y2='170'/%3E%3Cline x1='380' y1='236' x2='380' y2='196'/%3E%3Cline x1='400' y1='260' x2='400' y2='176'/%3E%3C/g%3E%3C/svg%3E">
+        <span>音频与耳机 · 顾迟</span>
+      </figure>
+      <figure class="mgl-wall-item mgl-w-e">
+        <img alt="影像墙：工作台上摊开的分镜稿与彩色便签" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 405'%3E%3Crect width='720' height='405' fill='%23dfe8f2'/%3E%3Crect x='40' y='50' width='420' height='300' rx='8' fill='%23ffffff' stroke='%23c3d1e2' stroke-width='4'/%3E%3Cg fill='none' stroke='%235b7186' stroke-width='3' opacity='0.65'%3E%3Crect x='70' y='84' width='110' height='70'/%3E%3Crect x='200' y='84' width='110' height='70'/%3E%3Crect x='330' y='84' width='100' height='70'/%3E%3Cline x1='70' y1='190' x2='300' y2='190'/%3E%3Cline x1='70' y1='212' x2='340' y2='212'/%3E%3Cline x1='70' y1='234' x2='250' y2='234'/%3E%3C/g%3E%3Crect x='500' y='80' width='90' height='90' rx='6' fill='%23f6c453' transform='rotate(8 545 125)'/%3E%3Crect x='540' y='200' width='90' height='90' rx='6' fill='%2322d3a5' transform='rotate(-6 585 245)'/%3E%3Crect x='470' y='290' width='160' height='16' rx='8' fill='%23c9a06a'/%3E%3C/svg%3E">
+        <span>分镜与便签 · 白岫</span>
+      </figure>
+    </div>
+    <div class="mgl-review-grid" style="grid-template-columns:repeat(2,1fr)">
+      <article class="mgl-about-card">
+        <h3 style="font-size:17px">随笔 · 把镜头留给等待</h3>
+        <p>拍了七年黄昏之后，我渐渐发现，所谓好画面并不是等来的那一刻，而是愿意一直等下去的那段时间。
+        磁力联盟的企划给了我一个理由，把那些看起来没有结果的等待也剪进片子里。观众后来留言说，
+        他们喜欢的正是那些没有发生的部分。</p>
+        <p style="color:#8a97ad;font-size:12.5px">—— 程未 · 人物访谈创作者</p>
+      </article>
+      <article class="mgl-about-card">
+        <h3 style="font-size:17px">随笔 · 技术是表达的一部分</h3>
+        <p>调色不是给画面上颜色，而是把拍摄当下的空气感还原出来。在磁力联盟的后期机房里，
+        我们常常为了一场三秒的过渡反复比对。有人觉得这是苛求，但正是这种苛求，
+        让观众在不知不觉中相信了画面的真实。</p>
+        <p style="color:#8a97ad;font-size:12.5px">—— 唐叙 · 后期与幕后创作者</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 用户评价 + 榜单 ========== -->
+<section class="mgl-section">
+  <div class="mgl-wrap">
+    <div class="mgl-sec-head">
+      <div>
+        <p class="mgl-sec-eyebrow">COMMUNITY VOICES</p>
+        <h2 class="mgl-h2">用户与创作者的声音 · 真实反馈构成的社区</h2>
+        <p class="mgl-sec-sub">来自评论区、投稿信箱与线下活动的真实评价，持续更新。</p>
+      </div>
+    </div>
+    <div class="mgl-review-grid">
+      <article class="mgl-review-card">
+        <div class="mgl-review-stars">★★★★★</div>
+        <p>看了半年磁力联盟的日常记录类内容，最大的感受是“不吵”。没有夸张的标题，画面干净，
+        看完能安静下来。这种品质在现在的视频平台里挺难得的。</p>
+        <div class="mgl-review-name">
+          <span class="mgl-avatar" style="background:#22a98b">苏</span>
+          <div><b>苏早</b><small>普通用户 · 关注 1 年</small></div>
+        </div>
+      </article>
+      <article class="mgl-review-card">
+        <div class="mgl-review-stars">★★★★★</div>
+        <p>作为创作者，我很在意平台是否真的尊重内容。磁力联盟的选题会会认真听完我的想法，
+        版权协议也写得清楚。第一次投稿就被采纳，那种被信任的感觉值得记住。</p>
+        <div class="mgl-review-name">
+          <span class="mgl-avatar" style="background:#ff6b4a">江</span>
+          <div><b>江迟</b><small>签约创作者 · 新人组</small></div>
+        </div>
+      </article>
+      <article class="mgl-review-card">
+        <div class="mgl-review-stars">★★★★☆</div>
+        <p>实用技巧系列帮了大忙，我照着布光那期视频重拍了自己的产品短片，甲方一次通过。
+        希望以后能多出一些关于录音设备的内容。</p>
+        <div class="mgl-review-name">
+          <span class="mgl-avatar" style="background:#3a7bd5">何</span>
+          <div><b>何序</b><small>自由职业者 · 关注 8 个月</small></div>
+        </div>
+      </article>
+      <article class="mgl-review-card">
+        <div class="mgl-review-stars">★★★★★</div>
+        <p>城市探索专题做得很有诚意，没有走马观花。我是本地人，看他们拍的那条巷子，
+        好多细节连我自己都没注意过。后来专门去走了一趟。</p>
+        <div class="mgl-review-name">
+          <span class="mgl-avatar" style="background:#6c8cae">罗</span>
+          <div><b>罗一鸣</b><small>普通用户 · 关注 2 年</small></div>
+        </div>
+      </article>
+      <article class="mgl-review-card">
+        <div class="mgl-review-stars">★★★★☆</div>
+        <p>专题企划的报名流程很顺，后台能看到审核进度。唯一的小建议是希望有更多面向学生创作者的
+        扶持名额，我愿意等下一期。</p>
+        <div class="mgl-review-name">
+          <span class="mgl-avatar" style="background:#a97e4c">季</span>
+          <div><b>季南</b><small>校园创作者 · 首次投稿</small></div>
+        </div>
+      </article>
+      <article class="mgl-review-card">
+        <div class="mgl-review-stars">★★★★★</div>
+        <p>行业观察那期报告我反复看了两遍，数据来源标注得很清楚，不是空话。对一个内容品牌来说，
+        愿意做这种偏冷的深度内容，说明他们真的在长期投入。</p>
+        <div class="mgl-review-name">
+          <span class="mgl-avatar" style="background:#8e7cf0">韩</span>
+          <div><b>韩桁</b><small>行业从业者 · 关注 1.5 年</small></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 企业动态 + 合作 ========== -->
+<section class="mgl-section mgl-section-alt mgl-anchor" id="mglNews">
+  <div class="mgl-wrap">
+    <div class="mgl-sec-head">
+      <div>
+        <p class="mgl-sec-eyebrow">NEWSROOM</p>
+        <h2 class="mgl-h2">企业动态 · 官方发布与内容更新</h2>
+        <p class="mgl-sec-sub">关于磁力联盟的最新消息、企划进展与合作公告。</p>
+      </div>
+    </div>
+    <div class="mgl-news-grid">
+      <article class="mgl-news-lead">
+        <span class="mgl-chip">最新发布</span>
+        <h3>冬季影像企划启动报名，同步开放 36 个精品内容席位</h3>
+        <p>11 月 18 日，磁力联盟在官方平台发布冬季影像企划第一期方案。本期以“慢下来的季节”为主题，
+        面向签约创作者与外部投稿者开放 36 个内容席位，涵盖纪录短片、人物访谈与创作幕后三条线索。
+        企划期间，磁力联盟将提供从选题评估到后期支持的全流程协助，并在成片上线后统一参与季度评选。</p>
+        <time>2026 年 11 月 18 日 · 品牌官方发布</time>
+      </article>
+      <div class="mgl-news-list">
+        <div class="mgl-news-item">
+          <span class="mgl-news-date">11 / 15</span>
+          <div><h4>创作者扶持计划第三期开放申请</h4><p>面向新人创作者提供设备支持与流量推荐，本期新增 20 个名额。</p></div>
+        </div>
+        <div class="mgl-news-item">
+          <span class="mgl-news-date">11 / 09</span>
+          <div><h4>磁力联盟创作学院上线专项课程</h4><p>新增声音设计与访谈提问两部分内容，共 12 节课时，面向所有注册用户开放。</p></div>
+        </div>
+        <div class="mgl-news-item">
+          <span class="mgl-news-date">10 / 28</span>
+          <div><h4>与三家影像设备品牌达成内容合作</h4><p>合作将围绕实测内容与线下工作坊展开，为创作者提供更稳定的器材支持。</p></div>
+        </div>
+        <div class="mgl-news-item">
+          <span class="mgl-news-date">10 / 16</span>
+          <div><h4>内容审核标准 2.0 版本正式生效</h4><p>进一步明确版权来源与素材使用规范，持续提升平台内容的可信度。</p></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:38px">
+      <h3 style="font-size:16px;color:#101828;margin-bottom:16px;letter-spacing:1px">合作品牌与伙伴</h3>
+      <div class="mgl-tag-cloud" style="gap:12px">
+        <span style="background:#fff;border:1px solid #e2e8f2;color:#3a4a68;padding:9px 20px">光影器材实验室</span>
+        <span style="background:#fff;border:1px solid #e2e8f2;color:#3a4a68;padding:9px 20px">城市文化研究中心</span>
+        <span style="background:#fff;border:1px solid #e2e8f2;color:#3a4a68;padding:9px 20px">青野文创空间</span>
+        <span style="background:#fff;border:1px solid #e2e8f2;color:#3a4a68;padding:9px 20px">音画技术工作室</span>
+        <span style="background:#fff;border:1px solid #e2e8f2;color:#3a4a68;padding:9px 20px">青年影像扶持基金</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="mgl-section mgl-anchor" id="mglFaq">
+  <div class="mgl-wrap">
+    <div class="mgl-sec-head">
+      <div>
+        <p class="mgl-sec-eyebrow">HELP & FAQ</p>
+        <h2 class="mgl-h2">帮助中心 · 关于投稿、版权与企划的常见问题</h2>
+        <p class="mgl-sec-sub">如果你的问题没有出现在这里，欢迎通过下方联系入口告诉我们。</p>
+      </div>
+    </div>
+    <div class="mgl-faq">
+      <details open>
+        <summary>如何向磁力联盟投稿？需要具备什么条件？</summary>
+        <p>任何具备原创影像能力的个人或团队都可以投稿。你需要在投稿入口填写作品基本信息、上传作品说明与
+        版权声明，并将成片以可访问链接的方式提交。我们建议作品为原创或已获得完整授权，画质不低于 1080P，
+        时长不做硬性限制。编辑部一般会在 5 个工作日内给出初步反馈。</p>
+      </details>
+      <details>
+        <summary>投稿作品的版权归属如何约定？</summary>
+        <p>磁力联盟尊重创作者的著作权。默认情况下，创作者保留作品署名权与著作权，平台获得经双方书面确认的
+        展示与推广授权。若作品参与商业合作或专题企划，我们会另行签署补充协议，明确使用范围、期限与收益分配，
+        所有条款以清晰可读为前提，不做模糊约定。</p>
+      </details>
+      <details>
+        <summary>专题企划的报名与评选流程是怎样的？</summary>
+        <p>每一季企划启动时，官方平台会发布主题说明与席位数量。报名分为提交选题、方案评估、成片制作与上线评选
+        四个阶段。评估阶段由编辑部与外部顾问共同参与，主要考察选题的新意、表达的完整度与执行的可行性。
+        评选结果会通过站内消息与官方发布渠道同步公布。</p>
+      </details>
+      <details>
+        <summary>我可以在其他地方看到磁力联盟的内容吗？</summary>
+        <p>磁力联盟的精品内容以官方网站为第一发布渠道，并会在官方认证的社交账号同步更新预告与花絮。
+        为保障版权与观看体验，完整内容请以磁力联盟官方网站发布为准，我们也持续打击未经授权的搬运行为。</p>
+      </details>
+      <details>
+        <summary>创作者扶持计划提供哪些支持？</summary>
+        <p>扶持计划包含设备借用、拍摄场地协调、后期技术指导、选题策划建议与首页推荐资源五个方面。
+        入选创作者会获得专属对接人，按项目周期跟进进度。计划每季度开放一次申请，具体名额与条件以当期公告为准。</p>
+      </details>
+      <details>
+        <summary>如何反馈内容问题或举报侵权行为？</summary>
+        <p>你可以在任意内容页面通过反馈入口提交问题，也可以发送邮件至官方联系邮箱，并附上作品链接与相关证明材料。
+        我们承诺在收到有效材料后的 3 个工作日内完成初步核实，并对确认的问题内容及时处理，处理结果会同步反馈给提交人。</p>
+      </details>
+      <details>
+        <summary>磁力联盟是否接受商业定制合作？</summary>
+        <p>接受。我们与品牌方、文化机构与线下空间均有合作经验，可提供从创意策划、拍摄制作到渠道分发的定制服务。
+        合作内容仍需符合平台的内容品质标准。你可以通过联系入口留下需求简述，商务团队会在一周内与你沟通细节。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 联系 ========== -->
+<section class="mgl-section mgl-anchor" id="mglContact" style="padding-top:0">
+  <div class="mgl-wrap">
+    <div class="mgl-contact">
+      <div>
+        <p class="mgl-sec-eyebrow" style="color:#7ff0d6">CONTACT & SUBMIT</p>
+        <h2>把你想拍的故事，交给磁力联盟</h2>
+        <p>无论是投稿、企划报名、商业合作还是内容反馈，我们都愿意认真读完。磁力联盟坚持用户至上，
+        每一条来自创作者与观众的声音，都会进入我们的例会讨论。</p>
+        <div class="mgl-contact-actions">
+          <button class="mgl-btn mgl-btn-mint" data-open-modal="submit">进入投稿入口</button>
+          <button class="mgl-btn mgl-btn-ghost" style="border-color:rgba(255,255,255,.35);color:#fff" data-open-modal="share">分享本站</button>
+          <button class="mgl-btn mgl-btn-ghost" style="border-color:rgba(255,255,255,.35);color:#fff" data-open-modal="report">反馈问题</button>
+        </div>
+      </div>
+      <div class="mgl-contact-info">
+        <div class="mgl-contact-row"><i>✉</i><div><b style="color:#fff">官方投稿邮箱</b><br>submit@magnetunion.example</div></div>
+        <div class="mgl-contact-row"><i>☎</i><div><b style="color:#fff">商务合作专线</b><br>工作日 10:00 - 18:00</div></div>
+        <div class="mgl-contact-row"><i>◎</i><div><b style="color:#fff">创作者服务中心</b><br>提供选题评估、后期支持与版权咨询</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="mgl-footer">
+  <div class="mgl-wrap">
+    <div class="mgl-footer-grid">
+      <div>
+        <div class="mgl-footer-logo">
+          <span class="mgl-logo-mark" style="width:32px;height:32px;border-radius:9px"><span style="font-size:16px">磁</span></span>
+          <strong>磁力联盟</strong>
+        </div>
+        <p>磁力联盟官方网站 · 企业级原创视频品牌<br>
+        专注高清影像内容与创作者生态，持续运营，值得信赖。<br>
+        让每一次创作，都产生吸引力。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <a href="#mglFeature">视频焦点</a><br>
+        <a href="#mglVideos">精品内容</a><br>
+        <a href="#mglTopics">专题企划</a><br>
+        <a href="#mglCreators">创作者矩阵</a>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <a href="#mglAbout">品牌解析</a><br>
+        <a href="#mglNews">企业动态</a><br>
+        <a href="#mglFaq">帮助中心</a><br>
+        <a href="#mglContact">联系方式</a>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <a href="#mglContact">作品投稿</a><br>
+        <a href="#mglTopics">企划报名</a><br>
+        <a href="#mglContact">商业合作</a><br>
+        <a href="#mglContact">问题反馈</a>
+      </div>
+    </div>
+    <div class="mgl-footer-bottom">
+      <span>© 2019 - 2026 磁力联盟 官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容均为原创正版 · 高清品质 · 官方发布</span>
+    </div>
+  </div>
+</footer>
+
+<button class="mgl-top-btn" id="mglTopBtn" aria-label="回到顶部">↑</button>
+<div class="mgl-toast" id="mglToast" role="status" aria-live="polite"></div>
+
+<div class="mgl-modal" id="mglModal">
+  <div class="mgl-modal-box" role="dialog" aria-modal="true" aria-labelledby="mglModalTitle">
+    <button class="mgl-modal-close" id="mglModalClose" aria-label="关闭">✕</button>
+    <div id="mglModalContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('mglToast');
+  var toastTimer = null;
+
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2100);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById('mglBurger');
+  var mobileNav = document.getElementById('mglMobileNav');
+  burger.addEventListener('click', function(){
+    var open = mobileNav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '✕' : '☰';
+  });
+  mobileNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      mobileNav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+      burger.textContent = '☰';
+    }
+  });
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById('mglSearchInput');
+  var searchBtn = document.getElementById('mglSearchBtn');
+  var searchFeedback = document.getElementById('mglSearchFeedback');
+
+  var searchTopics = ['冬季影像企划','人物访谈','城市探索','创作幕后','实用技巧','行业观察','日常记录','创作者扶持计划','版权说明','投稿指南'];
+
+  function doSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchFeedback.innerHTML = '试试输入 <b>访谈</b>、<b>城市</b> 或 <b>企划</b> 看看相关内容。';
+      searchFeedback.classList.add('show');
+      return;
+    }
+    var hit = searchTopics.filter(function(t){ return t.indexOf(q) !== -1; });
+    if(hit.length){
+      searchFeedback.innerHTML = '为你找到 ' + hit.length + ' 个相关方向：<b>' + hit.join('、') + '</b>';
+    }else{
+      searchFeedback.innerHTML = '暂未匹配到「<b>' + q + '</b>」，可尝试 访谈 / 城市 / 幕后 / 技巧 等方向。';
+    }
+    searchFeedback.classList.add('show');
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+  searchInput.addEventListener('input', function(){
+    if(searchInput.value.trim() === ''){ searchFeedback.classList.remove('show'); }
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.mgl-search')){ searchFeedback.classList.remove('show'); }
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.addEventListener('click', function(e){
+    var act = e.target.closest('.mgl-act');
+    if(!act) return;
+    var type = act.getAttribute('data-act');
+    if(type === 'like'){
+      var span = act.querySelector('span');
+      var n = parseInt(span.textContent.replace(/,/g,''),10) || 0;
+      if(act.classList.contains('liked')){
+        act.classList.remove('liked');
+        act.firstChild.textContent = '♡';
+        span.textContent = String(n - 1);
+        toast('已取消点赞');
+      }else{
+        act.classList.add('liked');
+        act.firstChild.textContent = '♥';
+        span.textContent = String(n + 1);
+        toast('感谢你的喜欢');
+      }
+    }
+    if(type === 'fave'){
+      if(act.classList.contains('faved')){
+        act.classList.remove('faved');
+        act.textContent = '☆收藏';
+        toast('已取消收藏');
+      }else{
+        act.classList.add('faved');
+        act.textContent = '★已收藏';
+        toast('已加入你的收藏');
+      }
+    }
+  });
+
+  /* ---------- 标签筛选 ---------- */
+  var filters = document.getElementById('mglFilters');
+  var grid = document.getElementById('mglVideoGrid');
+  filters.addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-filter]');
+    if(!btn) return;
+    Array.prototype.forEach.call(filters.children, function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    var key = btn.getAttribute('data-filter');
+    var cards = grid.querySelectorAll('.mgl-video-card');
+    var shown = 0;
+    Array.prototype.forEach.call(cards, function(card){
+      var match = (key === 'all') || (card.getAttribute('data-cat') === key);
+      card.style.display = match ? '' : 'none';
+      if(match) shown++;
+    });
+    toast(key === 'all' ? '已展示全部 ' + shown + ' 条内容' : '已筛选出 ' + shown + ' 条相关内容');
+  });
+
+  /* ---------- 模态框 ---------- */
+  var modal = document.getElementById('mglModal');
+  var modalContent = document.getElementById('mglModalContent');
+  var modalClose = document.getElementById('mglModalClose');
+
+  var modalTemplates = {
+    submit: '<h3 id="mglModalTitle">投稿入口</h3><p>填写基本信息，磁力联盟编辑部将在 5 个工作日内与你联系。</p>' +
+      '<div class="mgl-modal-field"><label for="mglFName">作品名称</label><input id="mglFName" type="text" placeholder="例如：清晨六点的一条街"></div>' +
+      '<div class="mgl-modal-field"><label for="mglFType">内容方向</label><select id="mglFType"><option>日常记录</option><option>人物访谈</option><option>创作幕后</option><option>城市探索</option><option>实用技巧</option><option>行业观察</option></select></div>' +
+      '<div class="mgl-modal-field"><label for="mglFContact">联系方式</label><input id="mglFContact" type="text" placeholder="邮箱或手机号"></div>' +
+      '<div class="mgl-modal-field"><label for="mglFDesc">作品简述</label><textarea id="mglFDesc" placeholder="简单介绍你的作品与创作想法"></textarea></div>' +
+      '<button class="mgl-btn mgl-btn-mint mgl-modal-submit" id="mglSubmitBtn">提交投稿信息</button>',
+
+    share: '<h3 id="mglModalTitle">分享磁力联盟</h3><p>选择你喜欢的方式，把这页分享给朋友。</p>' +
+      '<div class="mgl-share-row"><button data-share="微信">微信</button><button data-share="微博">微博</button><button data-share="QQ">QQ</button></div>' +
+      '<div class="mgl-modal-field" style="margin-top:16px"><label for="mglShareLink">页面链接</label><input id="mglShareLink" type="text" readonly value=""></div>' +
+      '<button class="mgl-btn mgl-btn-ghost mgl-modal-submit" id="mglCopyBtn">复制链接</button>',
+
+    report: '<h3 id="mglModalTitle">问题反馈</h3><p>我们会在 3 个工作日内核实并回复，感谢你的认真。</p>' +
+      '<div class="mgl-modal-field"><label for="mglRType">问题类型</label><select id="mglRType"><option>内容问题</option><option>版权与侵权</option><option>技术故障</option><option>合作咨询</option><option>其他建议</option></select></div>' +
+      '<div class="mgl-modal-field"><label for="mglRDesc">详细描述</label><textarea id="mglRDesc" placeholder="请描述你遇到的问题"></textarea></div>' +
+      '<div class="mgl-modal-field"><label for="mglRContact">联系方式（选填）</label><input id="mglRContact" type="text" placeholder="方便回复你的邮箱"></div>' +
+      '<button class="mgl-btn mgl-btn-mint mgl-modal-submit" id="mglReportBtn">提交反馈</button>',
+
+    author: function(name){
+      return '<h3 id="mglModalTitle">' + name + '</h3><p>磁力联盟签约创作者，长期参与平台专题企划与精品内容制作。</p>' +
+        '<div class="mgl-tag-cloud" style="margin-bottom:16px"><span>原创影像</span><span>持续更新</span><span>专题企划</span></div>' +
+        '<button class="mgl-btn mgl-btn-primary mgl-modal-submit" data-close-after>关注该创作者</button>';
+    }
+  };
+
+  function openModal(key, arg){
+    var html;
+    if(typeof modalTemplates[key] === 'function'){ html = modalTemplates[key](arg); }
+    else{ html = modalTemplates[key]; }
+    modalContent.innerHTML = html;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    var shareLink = document.getElementById('mglShareLink');
+    if(shareLink){
+      shareLink.value = 'https://magnetunion.example/portal';
+    }
+    var submitBtn = document.getElementById('mglSubmitBtn');
+    if(submitBtn){
+      submitBtn.addEventListener('click', function(){
+        var name = document.getElementById('mglFName').value.trim();
+        if(!name){ toast('请先填写作品名称'); return; }
+        closeModal();
+        toast('投稿信息已提交，感谢你的参与');
+      });
+    }
+    var copyBtn = document.getElementById('mglCopyBtn');
+    if(copyBtn){
+      copyBtn.addEventListener('click', function(){
+        var link = 'https://magnetunion.example/portal';
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(link).then(function(){ toast('链接已复制'); }).catch(function(){ toast('复制失败，请手动选择'); });
+        }else{
+          toast('请手动复制页面链接');
+        }
+      });
+    }
+    var reportBtn = document.getElementById('mglReportBtn');
+    if(reportBtn){
+      reportBtn.addEventListener('click', function(){
+        var desc = document.getElementById('mglRDesc').value.trim();
+        if(!desc){ toast('请填写问题描述'); return; }
+        closeModal();
+        toast('反馈已提交，我们会尽快核实');
+      });
+    }
+    modal.querySelectorAll('[data-share]').forEach(function(b){
+      b.addEventListener('click', function(){
+        toast('已生成' + b.getAttribute('data-share') + '分享提示');
+      });
+    });
+    modal.querySelectorAll('[data-close-after]').forEach(function(b){
+      b.addEventListener('click', function(){ closeModal(); toast('已关注'); });
+    });
+  }
+
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-open-modal]');
+    if(trigger){
+      openModal(trigger.getAttribute('data-open-modal'));
+      return;
+    }
+    if(e.target.closest('.mgl-author') || e.target.closest('.mgl-creator-card')){
+      var host = e.target.closest('[data-author]');
+      if(host){ openModal('author', host.getAttribute('data-author')); }
+    }
+  });
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('open')){ closeModal(); } });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('mglTopBtn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 560){ topBtn.classList.add('show'); }
+    else{ topBtn.classList.remove('show'); }
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+})();
+</script>
+</body>
+        </html>
